@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Punto 2</title>
+
+	<link rel="stylesheet" type="text/css" href="css2.css">
+</head>
+<body onload="fours(); iicon();">
+
+
+
+
+<script type="text/javascript">
+	
+	function fours(){
+
+		change=setTimeout(cambio,5000);
+
+	}
+
+	function cambio(){
+
+		c1 = document.getElementById('hl');
+		c2 = document.getElementById('cn');
+
+		c1.className="no";
+		c2.className="caja";
+		
+	}
+
+
+
+
+	var tiempo=10;
+
+	function iicon(){
+		cont=setTimeout(icon,5000);
+	}
+	
+	function icon(){
+			
+			console.log("mine");
+		termine=setInterval(contador,1000);
+
+		function contador(){
+			tiempo=tiempo-1;
+			console.log(tiempo);
+
+				document.getElementById("cn").innerHTML=(tiempo);
+			
+
+			if (tiempo==0) {
+				c3 = document.getElementById('ter');
+				c3.className="caja";
+				console.log("ter");
+				clearInterval(termine);
+			}
+
+
+		}
+
+	}
+
+
+
+</script>
+
+
+	<div class="caja" id="hl">
+		Hola
+	</div>
+
+	<div class="no" id="cn" >
+		
+	</div>
+
+	<div class="no" id="ter">Termine</div>
+
+</body>
+</html>
